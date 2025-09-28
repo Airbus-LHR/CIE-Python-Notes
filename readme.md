@@ -1,6 +1,6 @@
 # CIE Python语法考点总结
 
-## 一. 基本变量声明初始化
+## 一. 基本变量声明与初始化
 
 1. **常规变量类型**  
    系统自动检测类型
@@ -19,6 +19,7 @@
 
 3. **二维数组初始化**
    ```python
+   #创建row行col列的二维数组
    arr = [[0 for _ in range(col)] for _ in range(rol)]
    brr = [["" for _ in range(col)] for _ in range(rol)]
    crr = [[None for _ in range(col)] for _ in range(rol)]
@@ -26,15 +27,15 @@
 
 4. **日期**
    ```python
-   from datetime import date
-   d = date(2025, 3, 1)
-   print(d.year, d.month, d.day)
+   from datetime import date #非标准库，因此需要导入
+   d = date(2025, 3, 1) #创建日期对象，如date(2025, 3, 1)
+   print(d.year, d.month, d.day) #date三个属性：year, month, day
    ```
 
 5. **全局变量声明**
    ```python
-   global Animals
-   Animals = [""] * 10
+   global Animals #声明全局数组
+   Animals = [""] * 10 #存储10个动物名称的数组，必须与第一行分开写
    ```
 
 6. **类型注释（CIE要求）**
@@ -46,7 +47,7 @@
 7. **全局变量函数调用**
    ```python
    def function():
-       global Animals
+       global Animals #若要调用并操作要写这一行
        pass
    ```
 
@@ -62,7 +63,14 @@
    b = str(b)        # 转换为 str
    ```
 
-   **运算符**：`+ - * / // % **`
+   **运算符**：
+   `加法：+`
+   `减法：-`
+   `乘法：*`
+   `除法：/`
+   `整除：//`
+   `求余：%`
+   `求幂：**`
 
 2. **字符串**
    ```python
