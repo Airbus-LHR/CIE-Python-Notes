@@ -196,7 +196,7 @@
    ```python
    class Names(Name): #括号内为继承的父类
        def __init__(self, a, b):
-           Name.__init__(self, a) #调用父类构造器
+           super().__init__(a) #调用父类构造器
            self.b = b
    ```
 
