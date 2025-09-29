@@ -3,6 +3,7 @@
 ## 一. 基本变量声明与初始化
 
 1. **常规变量类型**
+   
    系统自动检测类型
    ```python
    a = 1 #integer
@@ -13,9 +14,8 @@
 2. **各类型数组初始化**
    ```python
    a = [0] * 10 #整数组，长度10，初始为0
-   b = [0.0] * 10 #小数数组
-   c = [""] * 10 #字符(串)数组
-   d = [None] * 10 #空数组（常用于 Class）
+   b = [""] * 10 #字符串数组
+   c = [None] * 10 #空数组（常用于 Class）
    ```
 
 3. **二维数组初始化**
@@ -53,12 +53,14 @@
    ```
 
 8. **类型检测**
+   
    ·使用type()函数
    ```python
    a = 1
-   b = 'a'
-   type(a) is int #判断a变量是否为
-   type(b) is not str #判断b是否不为string
+   b = ""
+   type(a) is int #判断a是否为int
+   type(b) is not str #判断b是否不为str
+   ```
 
 ---
 
@@ -90,7 +92,7 @@
    s.find("a") #找索引，不存在返回 -1
    s.index("a") #找索引，不存在报错
    s[1:3], s[1:], s[:3] #切片
-   f"my name is {name}" #f-string格式化,括号内填变量
+   f"my name is {name}" #f-string 格式化
    s.strip() #去除首尾空白
    s.casefold() #忽略大小写，也可以统一用lower()
    s.lower() #返回全小写
@@ -133,7 +135,6 @@
        pass
    ```
    **注：Python无do后置条件循环**
-
    ·死循环用法（用于暂时写不出具体条件）
    ```python
    while True:
@@ -194,7 +195,7 @@
    ```python
    class Names(Name): #括号内为继承的父类
        def __init__(self, a, b):
-           Name.__init__(self, a) #调用父类构造器
+           super().__init__(a) #调用父类构造器
            self.b = b
    ```
 
