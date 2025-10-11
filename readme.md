@@ -11,14 +11,14 @@
    c = True #boolean
    ```
 
-2. **各类型数组初始化**
+3. **各类型数组初始化**
    ```python
    a = [0] * 10 #整数组，长度10，初始为0
    b = [""] * 10 #字符串数组
    c = [None] * 10 #空数组（常用于 Class）
    ```
 
-3. **二维数组初始化**
+4. **二维数组初始化**
    ```python
    #创建row行col列的二维数组
    arr = [[0 for _ in range(col)] for _ in range(rol)]
@@ -26,33 +26,37 @@
    crr = [[None for _ in range(col)] for _ in range(rol)]
    ```
 
-4. **日期**
+5. **日期**
    ```python
    from datetime import date #非标准库，因此需要导入
    d = date(2025, 3, 1) #创建日期对象，如date(2025, 3, 1)
    print(d.year, d.month, d.day) #date三个属性：year, month, day
    ```
 
-5. **全局变量声明**
+6. **全局变量声明**
    ```python
    global Animals #声明全局数组
    Animals = [""] * 10 #存储10个动物名称的数组，必须与第一行分开写
    ```
 
-6. **全局变量函数调用**
+7. **全局变量函数调用**
    ```python
    def function():
        global Animals #若要调用并操作要写这一行
        pass
    ```
 
-7. **类型注释（CIE要求）**
+8. **类型注释（CIE要求）**
    ```python
    QueueArray = [] #array of string
    HeadPointer = 0 #integer
    ```
 
+<<<<<<< HEAD
 8. **类型检测**
+=======
+9. **类型检测**
+>>>>>>> d82967c893233ce9fbbb4a686a2196e0529c7238
    
    ·使用type()函数
    ```python
