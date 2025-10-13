@@ -10,8 +10,8 @@ class Card:
 class Hand:
     def __init__(self, a, b, c, d, e):
         self.__Cards = [a, b, c, d, e] #list of Card objects
-        self.__FirstCard = 0
-        self.__NumberCards = 5
+        self.__FirstCard = 0 #integer
+        self.__NumberCards = 5 #integer
     def GetCard(self, i):
         return self.__Cards[i]
 
