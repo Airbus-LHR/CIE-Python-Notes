@@ -108,9 +108,37 @@
 
 ---
 
-## 三. 循环结构
+## 三. 分支结构与循环结构
 
-1. **for 循环**
+1. **分支结构**
+   ·使用if语句（常规分支结构）
+   ```python
+   if a == 1:
+       print('yes')
+   elif a == 2:
+       print('no')
+   else:
+       print('?')
+   ```
+   ·快速判断是否为某些值（不用写多个if）
+   ```python
+   if a in ['1', '4', '5', '8', '9']: #不用写5个if或者多重or
+       print(1)
+   ```
+   ·match case语句
+   ```python
+   a = int(input())
+   match a:
+       case 1 | 0:
+           print('a')
+       case 2:
+           print('b')
+       case 3:
+           print('c')
+       case _:
+           print('else')
+           
+2. **for 循环**
    ```python
    for i in range(num): #循环num次
        pass
@@ -121,15 +149,15 @@
    for i in range(start, end, step): #执行循环，从start至end，步长为step（P4不常考）
        pass
    ```
-
-   *嵌套*：
+   
+   **嵌套：**
    ```python
    for Row in range(1, 3): #行范围
        for Col in range(1, 9): #列范围
            pass
    ```
 
-2. **while 循环**
+3. **while 循环**
    ```python
    while condition: #只要condition成立
        pass
