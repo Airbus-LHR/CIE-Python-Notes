@@ -120,11 +120,13 @@
    else:
        print('?')
    ```
+   
    ·快速判断是否为某些值（不用写多个if）
    ```python
    if a in ['1', '4', '5', '8', '9']: #不用写5个if或者多重or
        print(1)
    ```
+
    ·match case语句
    ```python
    a = int(input())
@@ -138,7 +140,6 @@
        case _:
            print('else')
    ```
-           
 2. **for 循环**
    ```python
    for i in range(num): #循环num次
