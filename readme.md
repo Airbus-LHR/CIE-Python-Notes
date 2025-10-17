@@ -137,7 +137,7 @@
            print('b')
        case 3:
            print('c')
-       case _:
+       case _: #else语句
            print('else')
    ```
 2. **for 循环**
