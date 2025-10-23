@@ -11,19 +11,21 @@
    c = True #boolean
    ```
 
-3. **各类型数组初始化**
+3. **各类型数组声明及初始化**
    ```python
    a = [0] * 10 #整数组，长度10，初始为0
    b = [""] * 10 #字符串数组
    c = [None] * 10 #空数组（常用于 Class）
+   d = [] #不做任何初始化，若题目不要求初始化则这样写
    ```
 
 4. **二维数组初始化**
    ```python
    #创建row行col列的二维数组
-   arr = [[0 for _ in range(col)] for _ in range(rol)]
-   brr = [["" for _ in range(col)] for _ in range(rol)]
-   crr = [[None for _ in range(col)] for _ in range(rol)]
+   arr = [[0 for _ in range(col)] for _ in range(rol)] #初始化为0
+   brr = [["" for _ in range(col)] for _ in range(rol)] #字符串初始化""
+   crr = [[None for _ in range(col)] for _ in range(rol)] #初始化空
+   drr = [[for _ in range(col)] for _ in range(rol)]
    ```
 
 5. **日期**
@@ -91,7 +93,7 @@
    "a" in s #判断是否包含
    s.find("a") #找索引，不存在返回 -1
    s.index("a") #找索引，不存在报错
-   s[1:3], s[1:], s[:3] #切片
+   s[1:3], s[1:], s[:3] #切片，左闭右开
    f"my name is {name}" #f-string 格式化
    s.strip() #去除首尾空白
    s.casefold() #忽略大小写，也可以统一用lower()
