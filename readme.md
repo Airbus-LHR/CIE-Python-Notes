@@ -245,6 +245,12 @@
            super().__init__(a) #调用父类构造器
            self.b = b
    ```
+   ```python
+   class Names(name):
+       def __init__(self, a, b)
+           name.__init__(self, a)
+           self.b = b
+   ```
 
 3. **重写方法**
    ```python
