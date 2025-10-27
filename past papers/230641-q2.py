@@ -32,7 +32,7 @@ class Helicopter(Vehicle):
     def IncreaseSpeed(self):
         self.__VerticalPosition = min(self.__VerticalPosition + self.__Change, self.__MaxHeight)
         self.SetCurrentSpeed(min(self.GetMaxSpeed(), self.GetIncreaseAmount() + self.GetCurrentSpeed()))
-        self.SetHorizontalPosition( self.GetHorizontalPosition() + self.GetCurrentSpeed())
+        self.SetHorizontalPosition(self.GetHorizontalPosition() + self.GetCurrentSpeed())
 
 def printStatus(v):
     if type(v) == Vehicle:

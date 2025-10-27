@@ -76,7 +76,7 @@
    b = str(b)  #转换为 str
    ```
 
-   **运算符**：
+   *运算符*：
    `加法：+`
    `减法：-`
    `乘法：*`
@@ -84,7 +84,6 @@
    `整除：//`
    `求余：%`
    `求幂：**`
-
 
 2. **字符串**
    ```python
@@ -94,13 +93,25 @@
    s.find("a") #找索引，不存在返回 -1
    s.index("a") #找索引，不存在报错
    s[1:3], s[1:], s[:3] #切片，左闭右开
-   f"my name is {name}" #f-string 格式化
+   f"my name is {name}" #f-string 格式化字符串
    s.strip() #去除首尾空白
    s.casefold() #忽略大小写，也可以统一用lower()
    s.lower() #返回全小写
+   a > b #字母顺序比较，越大越靠后
    ```
 
-3. **数组**
+3. **浮点数**
+   ```python
+   import math
+   a == b #会返回false因为会有舍入误差
+   a - b < 0.0001 #正确方法：控制精度误差
+   round(a, 2) #保留两位小数
+   math.ceil(a) #向上保留两位小数
+   math.floor(a) #向下保留两位小数
+   print(f"{x:.2f}") #格式化字符串显示
+   ```
+
+4. **数组**
    ```python
    arr.append(x) #追加
    del arr[2] #删除某位置
@@ -152,6 +163,10 @@
 
    for i in range(start, end, step): #执行循环，从start至end，步长为step（P4不常考）
        pass
+   for i in arr: #遍历每个元素，此时i表示的是元素不是索引，相当于Java的for each loop
+       print(i)
+   for i in Node:
+       print(i.data)
    ```
    
    **嵌套：**
