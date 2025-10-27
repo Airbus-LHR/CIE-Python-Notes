@@ -13,7 +13,7 @@ def ReadData():
                     break
                 i += 1
             return res
-    except FileNotFoundError:
+    except IOError:
         print("File does not exist")
 
 def SortScore(arr):

@@ -290,6 +290,15 @@
    file.close()
    ```
 
+3. **写入文件**
+   ```python
+   try:
+       with open("filename.txt", "w") as f:
+           f.write("a" + "\n") #写入一行，需要自行换行
+   except:
+       print("Cannot write data to file")
+   ```
+
 ---
 
 ## 七. 递归
